@@ -3,8 +3,17 @@ import LoginForm from '../layout/LoginForm'
 import RegisterForm from '../layout/RegisterForm'
 import useAuth from '../hooks/useAuth'
 import Header from '../layout/Header'
+import Homepage from '../components/Homepage'
 import UserHome from '../layout/UserHome'
-import NewTodoForm from '../layout/NewTodoForm'
+import Userprofile from '../layout/Userprofile'
+import Serve from '../layout/Serve'
+import Userpage from '../layout/Userpage'
+import Billpage from '../layout/ฺBillpage'
+import Chatpage from '../layout/Chatpage'
+import Servepage from '../layout/Servepage'
+import Statuspage from '../layout/Statuspage'
+import Contact from '../layout/Contact'
+
 
 const guestRouter = createBrowserRouter([
   {
@@ -27,9 +36,19 @@ const userRouter = createBrowserRouter([
       <Header />
       <Outlet />
     </>,
-    children : [
-      { index: true, element: <UserHome /> },
-      { path: '/new', element: <NewTodoForm />}
+    children: [
+      { index: true, element: <Homepage /> },
+      { path: '/User', element: <UserHome /> },
+      { path: '/new', element: <Serve/> },
+      { path: '/Pro', element: <Userprofile /> },
+      { path: '/Page', element: <Userpage /> },
+      { path: '/Home', element: <Homepage /> },
+      { path: '/Bill', element: <Billpage /> },
+      { path: '/Chat', element: <Chatpage /> },
+      { path: '/Servepage', element: <Servepage /> },
+      { path: '/Statuspage', element: <Statuspage /> },
+      { path: '/Contact', element: <Contact /> },
+
     ]
   }
 ])
