@@ -1,5 +1,6 @@
 import axios from 'axios'
 import {useEffect, useState} from 'react'
+import Listpage from './Listpage'
 
 export default function UserHome() {
   const [todos, setTodos] = useState([])
@@ -17,8 +18,7 @@ export default function UserHome() {
 
   return (
     <>
-    <div>UserHome</div>
-    { JSON.stringify(todos)}
+        <Listpage />
     </>
-  )
+)
 }
